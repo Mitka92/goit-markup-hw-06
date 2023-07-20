@@ -627,8 +627,21 @@ height: 40px;
 
 .footer-container {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+align-items: center;
 }
+@media screen and (min-width:768px) {
+    .footer-container{
+
+    }
+}
+
+@media screen and (min-width:1158px) {
+.footer-container{
+
+}
+}
+
 
 .social-link-footer {
     display: flex;
@@ -683,10 +696,6 @@ height: 40px;
       | Customers section
       |============================
     */
-.customers-section {
-    padding-top: 0px;
-    padding-bottom: 120px;
-}
 
 .customers-title{
   padding-top: 0;
