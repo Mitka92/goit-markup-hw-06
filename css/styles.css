@@ -45,12 +45,30 @@ button {
     font-family: inherit;
     cursor: pointer;
 }
+/* Base styles for small devices */
 .container{
-    width: 1158px;
+    min-width: 320px;
+    max-width: 428px;
+    padding-right: 16px;
+    padding-left: 16px;
     margin-left: auto;
     margin-right: auto;
-padding-left: 15px;
-padding-right: 15px;
+    outline: 2px solid red;
+    outline-offset: -2px;
+}
+/* Tablet screen */
+@media screen and (min-width:768px) {
+    .container{
+        max-width: 768px;
+    }
+}
+/* Descktop screen */
+@media screen and (min-width:1158px) {
+    .container{
+        max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
 }
 .visually-hidden {
@@ -260,20 +278,44 @@ background-color: var(--ocean);
 }
 
 .main-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
     color: var(--navy-blue);
     margin-bottom: 8px;
+    text-align: center;
+}
+@media screen and (min-width:768px) {
+.main-title{
+    text-align: left;
+}
+}
+
+@media screen and (min-width:1158px) {
+    .main-title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: var(--navy-blue);
+            margin-bottom: 8px;
+        }
 }
 
 .main-text {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.32px;
     color: var(--slate);
+}
+
+@media screen and (min-width:1158px) {
+    .main-text {
+            font-weight: 400;
+        }
 }
 /**
   |============================
@@ -281,21 +323,64 @@ background-color: var(--ocean);
   |============================
 */
 .features-section {
-padding: 120px 0;
+padding: 96px 0;
+}
+@media screen and (min-width:768px) {
+.features-section {
+        padding: 96px 0;}
+}
+
+@media screen and (min-width:1158px) {
+    .features-section {
+    padding: 120px 0;}
 }
 
 .features-list {
-    display: flex;
+}
+@media screen and (min-width:768px) {
+.features-list{
+display: flex;
+flex-wrap: wrap;
+}
 }
 
+@media screen and (min-width:1158px) {
+.features-list {
+        display: flex;
+    }
+}
 .feauters-items {
-    margin-right: 24px;
-    width: calc((100% - 72px) / 4);
+    margin-bottom: 72px;
+    margin-right: 0;
     
 }
-.feauters-items:nth-child(4){
-    margin-right: 0;
+.feauters-items:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+}
+@media screen and (min-width:768px) {
+.feauters-items{
+margin-right: 24px;
+width: calc((100% - 24px) / 2);
+}
 
+.feauters-items:nth-child(2n) {
+    margin-right: 0;
+}
+
+.feauters-items:nth-last-child(-n + 2){
+ margin-bottom: 0;
+}
+}
+
+@media screen and (min-width:1158px) {
+.feauters-items{
+width: calc((100% - 72px) / 4);
+margin-bottom: 0;
+margin-right: 24px;
+}
+.feauters-items:nth-child(2) {
+    margin-right: 24px;
+}
 }
 .thumb-feauters{
     display: flex;
@@ -305,6 +390,11 @@ padding: 120px 0;
        padding: 24px 0;
        margin-bottom: 8px;
        border-radius: 4px;
+}
+@media screen and (max-width: 1158px){
+    .thumb-feauters{
+        display: none;
+    }
 }
 /**
   |============================
