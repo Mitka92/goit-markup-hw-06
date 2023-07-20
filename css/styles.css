@@ -295,6 +295,13 @@ background-color: var(--ocean);
     text-transform: capitalize;
     text-align: center;
     margin-bottom: 72px;
+    padding-top: 96px;
+}
+
+@media screen and (min-width:1158px) {
+    .section-title {
+    padding-top: 0;
+        }
 }
 
 .main-title {
@@ -422,9 +429,15 @@ margin-right: 24px;
   |============================
 */
 .wawd-section {
-    padding-top: 60px;
     padding-bottom: 120px;
 }
+@media screen and (max-width:1158px) {
+    .wawd-section{
+        display: none;
+    }
+    
+}
+
 
 .wawd-list {
     display: flex;
@@ -448,29 +461,80 @@ margin-right: 24px;
   |============================
 */
 .ot-section {
-    background-color: var(--cloud);
-    padding-top: 120px;
-    padding-bottom: 120px;
-    text-align: center;
+        background-color: var(--cloud);
+        text-align: center;
+        margin-bottom: 96px;
+}
+@media screen and (min-width:768px) {
+    .ot-section{
+padding-bottom: 96px;
+    }
 }
 
+@media screen and (min-width:1158px) {
+    .ot-section {
+            background-color: var(--cloud);
+            padding-top: 120px;
+            padding-bottom: 0;
+            text-align: center;
+        }
+}
 
 .ot-list {
     display: flex;
     margin-top: 72px;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+@media screen and (min-width:1158px) {
+    .ot-list {
+            display: flex;
+            margin-top: 72px;
+            flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1157px) {
+    .card:nth-child(2n) {
+        margin-right: 0;
+    }
 }
 
 
 .card{
+
     background-color: var(--white);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
         border-radius: 0px 0px 4px 4px;
         width: calc((100% - 3 * 24) / 4);
-        margin-right: 24px;
+        margin-right: 0;
         box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+margin-bottom: 72px;
+    @media screen and (max-width:768px){
+    .card{
+        margin-right: 0;
+    }
+}
 
-    
+}
+@media screen and (min-width:768px) {
+    .card {
+        margin-right: 24px;
+    }
+}
+@media screen and (min-width:1158px) {
+    .card {
+margin-right: 24px;
+        }
+}
+@media screen and (min-width: 768px) and (max-width:1157px){
+.card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+}
 }
 .card:nth-child(4n){
     margin-right: 0;
@@ -620,17 +684,24 @@ height: 40px;
       |============================
     */
 .customers-section {
-    padding-top: 120px;
+    padding-top: 0px;
     padding-bottom: 120px;
 }
 
+.customers-title{
+  padding-top: 0;
+  margin-bottom: 72px;
+}
+
+@media screen and (min-width:1158px){
+    .customers-title {
+            margin-top: 120px;
+        }
+}
 .customers-list {
     display: flex;
-    padding-bottom: 120px;
-    gap: 24px;
-    justify-content: center;
-    align-items: center;
-}
+    flex-wrap: wrap;}
+
 
 .customers-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -638,10 +709,45 @@ height: 40px;
 }
 
 .customers-item {
-    width: calc((100% - 120px) / 6);
+    width: calc((100% - 24px) / 2);
     height: 88px;
-
+    margin-right: 24px;
+    margin-bottom: 96px;
 }
+
+@media screen and (max-width:767px) {
+    .customers-item:nth-child(2n) {
+            margin-right: 0;
+        }
+}
+
+
+@media screen and (min-width:768px) {
+    .customers-item {
+        width: calc((100% - 48px) / 3);
+    }
+
+ 
+}
+
+    @media screen and (min-width:768px) and (max-width:1157px){
+.customers-item:nth-child(3n) {
+        margin-right: 0;
+    }
+    }
+
+@media screen and (min-width:1158px) {
+    .customers-item {
+        width: calc((100% - 120px) / 6);
+        height: 88px;
+        margin-bottom: 120px;
+    }
+
+    .customers-item:nth-last-child(-n + 1) {
+        margin-right: 0;
+    }
+}
+
 
 .link-customers {
     width: 100%;
@@ -678,28 +784,11 @@ height: 40px;
   | Portfolio page
   |============================
 */
-.customers-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
 
-.customers-list {
-    display: flex;
-    padding-bottom: 120px;
-    gap: 24px;
-    justify-content: center;
-        align-items: center;
-}
 
 .customers-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: currentColor;
-}
-
-.customers-item {
-    width: calc((100% - 120px) / 6);
-    height: 88px;
-    
 }
 .link-customers{
     width: 100%;
